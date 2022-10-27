@@ -31,5 +31,6 @@ struct Grid{
  * @return Grid 
  */
 struct Grid init_level(const char* file_path);
+void display(struct Grid *g1);
 
 #endif
