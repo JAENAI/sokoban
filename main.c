@@ -2,9 +2,8 @@
 #include "grid.h"
 #include <stdbool.h>
 int main(void){
-	char* file;
-	scanf("%s",file);
-	printf("\n");
+	struct Grid g2=init_level("level1.txt");
+	display(*g2);
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);
@@ -15,7 +14,6 @@ int main(void){
 			}
 		}
 	}
-	init_level(file);
 	return 0;
 }
 
