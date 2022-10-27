@@ -8,7 +8,7 @@ struct Grid init_level(const char* file_path){
 	FILE* file = fopen(file_path, "r");
 	if(!file){
 		fprintf(stderr, "Error %s not found", file_path);
-		exit(-1).
+		exit(-1);
 	}
 	char line[100] = {0};
 	int number_column = 0; // nombre de colonne
@@ -39,4 +39,13 @@ struct Grid init_level(const char* file_path){
 	// fermeture du fichier
 	fclose(file);
 	return *g;
+}
+
+void display(struct Grid * g1){
+	for(int i=0; i<g1->row_number;i++){
+		for(int j=0; j<g1->column_number;j++){
+			printf("%c",g1->game_grid[i][j]);
+		}
+		printf("\n");
+	}
 }
