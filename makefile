@@ -14,7 +14,7 @@ clean :
 	rm -f *.o
 doc :
 	doxygen -g
-	PROJECT_NAME ="projet-sokoban"
+	PROJECT_NAME ="projet_sokoban"
 	INPUT= .
 	doxygen Doxyfile
 archive :
