@@ -8,7 +8,7 @@ struct Grid init_level(const char* file_path){
 	FILE* file = fopen(file_path, "r");
 	if(!file){
 		fprintf(stderr, "Error %s not found", file_path);
-		exit(-1);
+		exit(-1).
 	}
 	char line[100] = {0};
 	int number_column = 0; // nombre de colonne
