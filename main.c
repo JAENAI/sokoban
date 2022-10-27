@@ -2,7 +2,9 @@
 #include "grid.h"
 #include <stdbool.h>
 int main(void){
-	
+	char* file;
+	scanf("%s",file);
+	printf("\n");
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);
@@ -13,5 +15,7 @@ int main(void){
 			}
 		}
 	}
+	init_level(file);
+	return 0;
 }
 
