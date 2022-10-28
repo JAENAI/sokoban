@@ -3,7 +3,7 @@
 #include <stdbool.h>
 int main(void){
 	struct Grid g2=init_level("level1.txt");
-	display(*g2);
+	display(&g2);
 	bool run = true;
 	while(run){
 		char entry = fgetc(stdin);
