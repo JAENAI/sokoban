@@ -5,23 +5,23 @@
  * @brief Information sur ce que chaque symbole represente
  * 
  */
-enum CaseType{
+typedef enum CaseType{
 	WALL = '#',
 	BOX = '$',
 	PLAYER = '@',
 	GOAL = '.',
 	NONE = ' '
-};
+}CaseType;
 /**
  * @struct Grid grid.h
  * @brief Cette structure contient les informations 
  * concernant la grille du jeu et son contenu
  */
-struct Grid{
+typedef struct Grid{
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
 	int column_number; ///< Nombre de colonne de game_grid
 	int row_number; ///< Nomber de ligne de game_grid
-};
+}Grid;
 /**
  * @brief
  * La fonction lit le fichier ligne par ligne pour mettre chaque caractere dans le tableau des entités présents
@@ -31,6 +31,12 @@ struct Grid{
  * @return Grid 
  */
 struct Grid init_level(const char* file_path);
+/**
+ * @brief 
+ * La fonction affiche le niveau
+ * 
+ * @param g1 Adresse du niveau
+ */
 void display(struct Grid *g1);
 
 #endif
