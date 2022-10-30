@@ -32,11 +32,15 @@ Grid init_level(const char* file_path){
 		int current_column = 0;
 		while(*buffer && *buffer != '\n'){
 			g->game_grid[current_row][current_column]=*buffer;
-			current_column += 1;
-			buffer +=1;
 			if(*buffer=='.'){
 				current_goal+=1;
 			}
+			if(*buffer=='@'){
+				g->p.x=current_column;
+				g->p.y=number_row-current_row;
+			}
+			current_column += 1;
+			buffer +=1;
 		}		
 		current_row+=1;
 	}
