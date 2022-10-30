@@ -10,6 +10,7 @@
  */
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
+
 /**
  * @struct Player player.h
  * 
@@ -22,6 +23,13 @@ typedef struct Player{
     int y;
 }Player;
 
+/**
+ * @enum Direction
+ * 
+ * @brief 
+ * Les directions possibles du joueur
+ * 
+ */
 typedef enum Direction{
     Top,
     Left,
