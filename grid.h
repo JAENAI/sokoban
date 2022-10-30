@@ -1,5 +1,6 @@
 #ifndef GRID_HEADER
 #define GRID_HEADER
+#include "player.h"
 /**
  * @enum CaseType grid.h
  * @brief Information sur ce que chaque symbole represente
@@ -18,6 +19,7 @@ typedef enum CaseType{
  * concernant la grille du jeu et son contenu
  */
 typedef struct Grid{
+	Player p; ///< La position du joueur
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
 	int column_number; ///< Nombre de colonne de game_grid
 	int row_number; ///< Nomber de ligne de game_grid
