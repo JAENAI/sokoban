@@ -17,11 +17,16 @@
  * La structure joueur contenant la position de celui-ci
  * 
  */
-typedef struct Player
-{
+typedef struct Player{
     int x;
     int y;
 }Player;
 
+typedef enum Direction{
+    Top,
+    Left,
+    Right,
+    Bottom
+}Direction;
 
 #endif
