@@ -10,12 +10,18 @@
  */
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
-
-typedef struct player
+/**
+ * @struct Player player.h
+ * 
+ * @brief 
+ * La structure joueur contenant la position de celui-ci
+ * 
+ */
+typedef struct Player
 {
     int x;
     int y;
-}player;
+}Player;
 
 
 #endif
