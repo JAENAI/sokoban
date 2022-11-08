@@ -11,6 +11,8 @@
 #ifndef PLAYER_HEADER
 #define PLAYER_HEADER
 
+typedef struct Grid Grid;
+
 /**
  * @struct Player player.h
  * 
@@ -39,12 +41,11 @@ typedef enum Direction{
 
 /**
  * @brief 
- * La fonction prend en parametre une structure grid qui contient le joueur et une direction
- * La fonction amene le joueur dans une direction ce qui change egalement la position x et y du joueur
+ * Fonction permettant le joueur de bouger dans une direction
  * 
- * @param g1 
+ * @param g 
  * @param d 
  */
-void move_player(Grid* g1,Direction d);
+void move_player(Grid* g,Direction d);
 
 #endif
