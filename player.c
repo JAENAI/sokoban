@@ -29,7 +29,8 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             if(x1==x_g&&y1==y_g){
-                g->game_grid[x1][y1]='.';
+                g->game_grid[y1+1][x1]='@';
+                g->game_grid[y1][x1]='.';
             }
             break;
         case Left:
@@ -53,6 +54,7 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             if(x1==x_g&&y1==y_g){
+                g->game_grid[y1][x1-1]='@';
                 g->game_grid[y1][x1]='.';
             }
             break;
@@ -77,6 +79,7 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             if(x1==x_g&&y1==y_g){
+                g->game_grid[y1][x1+1]='@';
                 g->game_grid[y1][x1]='.';
             }
             break;
@@ -97,6 +100,7 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             if(x1==x_g&&y1==y_g){
+                g->game_grid[y1-1][x1]='@';
                 g->game_grid[y1][x1]='.';
             }
             break;
