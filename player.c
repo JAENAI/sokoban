@@ -43,8 +43,8 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             else if(g->game_grid[y1][x1-1]=='.'){
-                x_g=x1;
-                y_g=y1+1;
+                x_g=x1-1;
+                y_g=y1;
                 g->game_grid[y1][x1-1]='@';
                 g->game_grid[y1][x1]=' ';
             }
