@@ -1,8 +1,6 @@
 #include "grid.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "player.h"
-#include <string.h>
 Grid init_level(const char* file_path){
 	// ouverture du fichier en mode lecture
 	Grid* g=(Grid*)malloc(sizeof(Grid));
@@ -36,7 +34,7 @@ Grid init_level(const char* file_path){
 				current_goal+=1;
 			}
 			if(*buffer=='@'){
-				g->p.x=current_column;
+				g->p.x=current_column+1;
 				g->p.y=number_row-current_row;
 			}
 			current_column += 1;
