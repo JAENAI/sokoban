@@ -24,6 +24,7 @@ typedef struct Grid{
 	int column_number; ///< Nombre de colonne de game_grid
 	int row_number; ///< Nomber de ligne de game_grid
 	int ** pos_goal; ///< Les positions des goals
+	int goal_number; ///< Le nombre des goals
 }Grid;
 /**
  * @brief
