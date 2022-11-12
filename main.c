@@ -5,8 +5,6 @@ int main(void){
 	Grid g2=init_level("level1.txt");
 	display(&g2);
 	bool run = true;
-	move_player(&g2,Top);
-	display(&g2);
 	while(run){
 		char entry = fgetc(stdin);
 		switch(entry){
