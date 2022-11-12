@@ -42,8 +42,7 @@ Grid init_level(const char* file_path){
 		}		
 		current_row+=1;
 	}
-	// fermeture du fichier
-	//sauvegarde de la position des goals
+	//On sauvegarde de la position des goals
 	g->goal_number=number_goals;
 	g->pos_goal=malloc(number_goals*sizeof(int*));
 	for(int i=0;i<number_goals;i++){
@@ -58,6 +57,7 @@ Grid init_level(const char* file_path){
 			}
 		}
 	}
+	// fermeture du fichier
 	fclose(file);
 	return *g;
 }
