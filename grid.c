@@ -31,7 +31,7 @@ Grid init_level(const char* file_path){
 		while(*buffer && *buffer != '\n'){
 			g->game_grid[current_row][current_column]=*buffer;
 			if(*buffer=='.'){
-				current_goal+=1;
+				number_goals+=1;
 			}
 			if(*buffer=='@'){
 				g->p.x=current_column+1;
@@ -43,6 +43,21 @@ Grid init_level(const char* file_path){
 		current_row+=1;
 	}
 	// fermeture du fichier
+	//sauvegarde de la position des goals
+	g->goal_number=number_goals;
+	g->pos_goal=malloc(number_goals*sizeof(int*));
+	for(int i=0;i<number_goals;i++){
+		g->game_grid[i]=malloc(2*sizeof(int));
+	}
+	for(int i=0;i<number_row;i++){
+		for(int j=0;j<number_column;j++){
+			if(g->game_grid[i][j]=='.'){
+				g->pos_goal[current_goal][0]=i;
+				g->pos_goal[current_goal][1]=j;
+				current_goal+=1;
+			}
+		}
+	}
 	fclose(file);
 	return *g;
 }
