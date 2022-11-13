@@ -34,8 +34,8 @@ Grid init_level(const char* file_path){
 				number_goals+=1;
 			}
 			if(*buffer=='@'){
-				g->p.x=current_column+1;
-				g->p.y=number_row-current_row;
+				g->p.x=current_column;
+				g->p.y=number_row-current_row-1;
 			}
 			current_column += 1;
 			buffer +=1;
