@@ -34,13 +34,13 @@ typedef struct Grid{
  * 
  * @return Grid 
  */
-struct Grid init_level(const char* file_path);
+Grid init_level(const char* file_path);
 /**
  * @brief 
  * La fonction affiche le niveau
  * 
  * @param g1 Adresse du niveau
  */
-void display(struct Grid *g1);
+void display(Grid *g1);
 
 #endif
