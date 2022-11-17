@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "grid.h"
 #include <stdbool.h>
 int main(void){
@@ -25,6 +26,14 @@ int main(void){
 				display(&g2);
 				break;
 			case 'q' :{
+				for(int i=0;i<g2.row_number;i++){
+					free(g2.game_grid[i]);
+				}
+				free(g2.game_grid);
+				for(int j=0;j<g2.goal_number;j++){
+					free(g2.pos_goal[j]);
+				}
+				free(g2.pos_goal);
 				run = false;
 				break;
 			}
