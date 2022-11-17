@@ -11,7 +11,7 @@ Grid init_level(const char* file_path){
 	}
 	char line[100] = {0};
 	int number_column = 0; // nombre de colonne
-	int number_row = 0; /// nombre de ligne
+	int number_row = 0; // nombre de ligne
 	int number_goals = 0;
 	// on lit la première ligne du fichier et on enregistre les tailles de notre tableau de jeu
 	fgets(line, 100, file);
@@ -63,6 +63,7 @@ Grid init_level(const char* file_path){
 }
 
 void display(Grid* g1){
+	// On lit le tableau de jeu ligne par ligne en affichant ce qui est sur celle-ci
 	for(int i=0; i<g1->row_number;i++){
 		for(int j=0; j<g1->column_number;j++){
 			printf("%c",g1->game_grid[i][j]);

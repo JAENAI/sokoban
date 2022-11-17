@@ -3,8 +3,10 @@
 #include <stdio.h>
 
 void move_player(Grid* g,Direction d){
+    // On sauvegarde les positions des joueurs pour pouvoir les utiliser
     int x1=g->p.x;
     int y1=g->p.y;
+    // On vérifie dans quelle position on va bouger et si c'est possible puis on effectue le mouvement dependemment
     switch(d){
         case Top:
             if(g->game_grid[y1+1][x1]=='$'&&g->game_grid[y1+2][x1]!='#'){
@@ -61,6 +63,7 @@ void move_player(Grid* g,Direction d){
         default:
             break;
      }
+     // On remet les goals si il n'y a plus rien dessus
     for(int i=0;i<g->goal_number;i++){
         if(g->pos_goal[i][0]==y1&&g->pos_goal[i][1]==x1){
             g->game_grid[y1][x1]='.';

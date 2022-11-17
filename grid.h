@@ -22,24 +22,25 @@ typedef struct Grid{
 	Player p; ///< La position du joueur
 	enum CaseType** game_grid; ///< Tableau contenant les entités présents dans le jeu
 	int column_number; ///< Nombre de colonne de game_grid
-	int row_number; ///< Nomber de ligne de game_grid
+	int row_number; ///< Nombre de ligne de game_grid
 	int ** pos_goal; ///< Les positions des goals
 	int goal_number; ///< Le nombre des goals
 }Grid;
 /**
  * @brief
  * La fonction lit le fichier ligne par ligne pour mettre chaque caractere dans le tableau des entités présents
+ * Elle retourne une structure grid initialisé
  * 
  * @param file_path Le chemin du fichier 
  * 
- * @return Grid 
+ * @return Grid Une structure grid initialisé avec le niveau
  */
 Grid init_level(const char* file_path);
 /**
  * @brief 
  * La fonction affiche le niveau
  * 
- * @param g1 Adresse du niveau
+ * @param g1 Un pointeur sur la structure grid contenant le niveau du jeu et ce qui y est
  */
 void display(Grid *g1);
 

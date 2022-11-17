@@ -43,8 +43,8 @@ typedef enum Direction{
  * @brief 
  * Fonction permettant le joueur de bouger dans une direction
  * 
- * @param g 
- * @param d 
+ * @param g Un pointeur sur la structure grid contenant le niveau du jeu et ce qui y est
+ * @param d Une direction
  */
 void move_player(Grid* g,Direction d);
 
