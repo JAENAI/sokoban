@@ -12,9 +12,6 @@ player.o: player.c grid.h player.h
 clean : 
 	rm -f *.o
 doc :
-	doxygen -g
-	PROJECT_NAME ="projet_sokoban"
-	INPUT= .
 	doxygen Doxyfile
 archive :
 	tar -cf RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz *.c *.h makefile level1.txt
