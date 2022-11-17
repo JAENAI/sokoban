@@ -1,6 +1,6 @@
 CFLAGS = -Wall -Wextra
 LDFLAGS = -o
-CC = gcc
+CC = gcc -g
 
 main : main.o grid.o player.o grid.h player.h
 	$(CC) $(CFLAGS) $(LDFLAGS) $@ main.c grid.c player.c
@@ -18,5 +18,5 @@ doc :
 	INPUT= .
 	doxygen Doxyfile
 archive :
-	tar -cf RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz 'projet-sokoban'
+	tar -cf RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz *.c *.h makefile level1.txt
 
