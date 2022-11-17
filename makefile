@@ -1,9 +1,8 @@
 CFLAGS = -Wall -Wextra
-LDFLAGS = -o
 CC = gcc -g
 
 main : main.o grid.o player.o grid.h player.h
-	$(CC) $(CFLAGS) $(LDFLAGS) $@ main.c grid.c player.c
+	$(CC) $(CFLAGS) -o $@ main.c grid.c player.c
 main.o : main.c grid.h player.h
 	$(CC) $(CFLAGS) -c $<
 grid.o: grid.c grid.h player.h
