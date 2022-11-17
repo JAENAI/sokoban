@@ -14,5 +14,5 @@ clean :
 doc :
 	doxygen Doxyfile
 archive :
-	tar -cf RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz *.c *.h makefile level1.txt
+	tar -cf RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz *.c *.h makefile level1.tx
 
