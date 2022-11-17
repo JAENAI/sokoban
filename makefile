@@ -11,6 +11,8 @@ player.o: player.c grid.h player.h
 	$(CC) $(CFLAGS) -c $<
 clean : 
 	rm -f *.o
+	rm -f main.exe
+	rm -f RUGENGANDE_IHIMBAZWE_Jaenai.tar.gz
 doc :
 	doxygen Doxyfile
 archive :
