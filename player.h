@@ -21,8 +21,8 @@ typedef struct Grid Grid;
  * 
  */
 typedef struct Player{
-    int x;
-    int y;
+    int x;///< Position par rapport à l'axe des abscisses
+    int y;///< Position par rapport à l'axe des ordonnées
 }Player;
 
 /**
