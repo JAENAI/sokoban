@@ -10,6 +10,9 @@ void move_player(Grid* g,Direction d){
     switch(d){
         case Top:
             if(g->game_grid[y1+1][x1]=='$'&&g->game_grid[y1+2][x1]!='#'){
+                if(g->game_grid[y1+2][x1]=='.'){
+                    g->covered_goals++;
+                }
                 g->p.y++;
                 g->game_grid[y1+2][x1]='$';
                 g->game_grid[y1+1][x1]='@';
@@ -23,6 +26,9 @@ void move_player(Grid* g,Direction d){
             break;
         case Left:
             if(g->game_grid[y1][x1-1]=='$'&&g->game_grid[y1][x1-2]!='#'){
+                if(g->game_grid[y1][x1-2]=='.'){
+                    g->covered_goals++;
+                }
                 g->p.x--;
                 g->game_grid[y1][x1-2]='$';
                 g->game_grid[y1][x1-1]='@';
@@ -36,6 +42,9 @@ void move_player(Grid* g,Direction d){
             break;
         case Right:
             if(g->game_grid[y1][x1+1]=='$'&&g->game_grid[y1][x1+2]!='#'){
+                if(g->game_grid[y1][x1+2]=='.'){
+                    g->covered_goals++;
+                }
                 g->p.x++;
                 g->game_grid[y1][x1+2]='$';
                 g->game_grid[y1][x1+1]='@';
@@ -49,6 +58,9 @@ void move_player(Grid* g,Direction d){
             break;
         case Bottom:
             if(g->game_grid[y1-1][x1]=='$'&&g->game_grid[y1-2][x1]!='#'){
+                if(g->game_grid[y1-2][x1]=='.'){
+                    g->covered_goals++;
+                }
                 g->p.y--;
                 g->game_grid[y1-2][x1]='$';
                 g->game_grid[y1-1][x1]='@';
@@ -69,4 +81,5 @@ void move_player(Grid* g,Direction d){
             g->game_grid[y1][x1]='.';
         }
     }
+
 }
