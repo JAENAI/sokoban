@@ -20,6 +20,7 @@ Grid init_level(const char* file_path){
 	for(int i=0;i<number_row;i++){
 		g->game_grid[i]=malloc(number_column*sizeof(CaseType));
 	}
+	g->covered_goals=0;
 	g->column_number=number_column;
 	g->row_number=number_row;
 	int current_row = 0;
@@ -70,4 +71,8 @@ void display(Grid* g1){
 		}
 		printf("\n");
 	}
+}
+
+bool check_covered_goals(Grid *g1){
+	return g1->goal_number==g1->covered_goals;
 }
