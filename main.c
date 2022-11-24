@@ -38,6 +38,9 @@ int main(void){
 				break;
 			}
 		}
+		if(check_covered_goals(&g2)){
+			break;
+		}
 	}
 	return 0;
 }
