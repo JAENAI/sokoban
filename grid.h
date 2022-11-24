@@ -1,6 +1,7 @@
 #ifndef GRID_HEADER
 #define GRID_HEADER
 #include "player.h"
+#include <stdbool.h>
 /**
  * @enum CaseType grid.h
  * @brief Information sur ce que chaque symbole represente
