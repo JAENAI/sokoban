@@ -25,6 +25,7 @@ typedef struct Grid{
 	int row_number; ///< Nombre de ligne de game_grid
 	int ** pos_goal; ///< Les positions des goals
 	int goal_number; ///< Le nombre des goals
+	int covered_goals;///< Le nombre de goals recouverts
 }Grid;
 /**
  * @brief
@@ -43,5 +44,15 @@ Grid init_level(const char* file_path);
  * @param g1 Un pointeur sur la structure grid contenant le niveau du jeu et ce qui y est
  */
 void display(Grid *g1);
+/**
+ * @brief 
+ * La fonction permet de verifier si tout les goals sont couverts
+ * 
+ * @param g1  Un pointeur sur la structure grid
+ * @return true Retourner vrai si il y a tous les goals qui sont couverts
+ * @return false Retourner faux si il n'y a pas tous les goals qui sont couverts
+ */
+
+bool check_covered_goals(Grid *g1);
 
 #endif
