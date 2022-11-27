@@ -31,9 +31,6 @@ Grid init_level(const char* file_path){
 		int current_column = 0;
 		while(*buffer && *buffer != '\n'){
 			g->game_grid[current_row][current_column]=*buffer;
-			if(*buffer=='.'){
-				number_goals+=1;
-			}
 			if(*buffer=='@'){
 				g->p.x=current_column;
 				g->p.y=number_row-current_row-1;
