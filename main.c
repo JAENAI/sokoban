@@ -39,7 +39,7 @@ int main(void){
 			}
 		}
 		if(check_covered_goals(&g2)){
-			break;
+			run=false;
 		}
 	}
 	return 0;
