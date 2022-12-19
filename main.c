@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "grid.h"
+#include "sdl2.h"
 #include <stdbool.h>
 int main(void){
+	SDLContext context;
 	Grid g2=init_level("level1.txt");
 	display(&g2);
 	bool run = true;
