@@ -6,6 +6,7 @@ typedef struct SDLContext {
   int width;
   int height;
 } SDLContext;
+extern SDLContext context;
 /* @brief 
  * Initialise une variable global `context` de type SDLContext
  *
