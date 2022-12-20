@@ -12,7 +12,7 @@ player.o: player.c grid.h player.h
 	$(CC) $(CFLAGS) -c $<
 grid.o: grid.c grid.h player.h
 	$(CC) $(CFLAGS) -c $<
-sdl2.o: sdl2.c sdl2.h
+sdl2.o: sdl2.c sdl2.h grid.h
 	$(CC) $(CFLAGS) $(INCLUDE) -c $<
 config:
 	cd SDL2 && chmod 777 configure
