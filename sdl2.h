@@ -14,6 +14,23 @@ typedef struct SDLContext {
   int height;
 } SDLContext;
 
+/**
+ *
+ *@brief
+ *Information sur les evenements
+ *@enum Event
+ *
+ */
+typedef enum Event{
+	Quit,
+	Left,
+	Right,
+	Up,
+	Down,
+	None	
+
+}Event;
+
 extern SDLContext context;
 /* @brief 
  * Initialise une variable global `context` de type SDLContext
