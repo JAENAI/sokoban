@@ -8,7 +8,7 @@ void move_player(Grid* g,Direction d){
     int y1=g->p.y;
     // On vérifie dans quelle position on va bouger et si c'est possible puis on effectue le mouvement dependemment
     switch(d){
-        case Top:
+        case Bottom:
             if(g->game_grid[y1+1][x1]=='$'&&g->game_grid[y1+2][x1]!='#'){
                 if(g->game_grid[y1+2][x1]=='.'){
                     g->covered_goals++;
@@ -56,7 +56,7 @@ void move_player(Grid* g,Direction d){
                 g->game_grid[y1][x1]=' ';
             }
             break;
-        case Bottom:
+        case Top:
             if(g->game_grid[y1-1][x1]=='$'&&g->game_grid[y1-2][x1]!='#'){
                 if(g->game_grid[y1-2][x1]=='.'){
                     g->covered_goals++;
