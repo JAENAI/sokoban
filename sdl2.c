@@ -80,3 +80,27 @@ void display_sdl2(Grid *g1){
   SDL_RenderPresent(context.renderer);
 
 }
+
+Event event_sdl2(){
+  SDL_Event event1;
+  SDL_WaitEvent(&event1);
+  switch(event1.type){
+    case SDL_QUIT:
+      return Quit;
+    case SDL_KEYUP:
+      switch(event1.key.keysym.sym){
+        case SDLK_DOWN:
+          return Down;
+        case SDLK_UP:
+          return Up;
+        case SDLK_LEFT:
+          return Left1;
+        case SDLK_RIGHT:
+          return Right1;
+        default:
+          return None;
+      }
+    default:
+      return None;
+  }
+}
